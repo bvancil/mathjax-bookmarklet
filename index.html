@@ -4,10 +4,10 @@
     <title>MathJax Bookmarklet</title>
 	<meta charset="utf-8" />
 
-	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 
 	<style>
-		#bookmarklet {
+		.bookmarklet {
 			display: block;
 
 			padding: 10px;
@@ -58,7 +58,15 @@
 			</div>
 			<div class="span8">
 				<a href="javascript:(function(){function e(e){var t='.MathJax .mn {background: inherit;} .MathJax .mi {color: inherit;} .MathJax .mo {background: inherit;}';var a=e.createElement('style');a.innerText=t;try{a.textContent=t}catch(n){}e.getElementsByTagName('body')[0].appendChild(a);var i=e.createElement('script'),o;i.src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js';i.type='text/javascript';o='MathJax.Hub.Config({tex2jax:{inlineMath:[[\'$\',\'$\']],displayMath:[[\'\\\\[\',\'\\\\]\']],processEscapes:true}});MathJax.Hub.Startup.onload();';if(window.opera)i.innerHTML=o;else i.text=o;e.getElementsByTagName('head')[0].appendChild(i)}function t(t){if(t.MathJax===undefined){e(t.document)}else{t.MathJax.Hub.Queue(new t.Array('Typeset',t.MathJax.Hub))}}var a=document.getElementsByTagName('iframe'),n,i;t(window);for(n=0;n<a.length;n++){i=a[n].contentWindow||a[n].contentDocument;if(!i.document)i=i.parentNode;t(i)}})();">
-					<img id="bookmarklet" src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" alt="MathJax">
+					<img class="bookmarklet" src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" alt="MathJax">
+				</a>
+				<div id="install"><em>Drag&amp;Drop to your bookmarks (right-click under older IE)!</em></div>
+			</div>
+			<p>
+				I've also made a second bookmarklet to replace the blurry image-based maths on WordPress.com blogs with nice neat MathJax. Click the MathJax bookmarklet first, then click the WordPress one.
+			<div class="span8">
+				<a href="javascript:(function(){var maths=document.getElementsByClassName("latex");while(maths.length){var s=document.createElement("script");s.setAttribute("type","math/tex");s.innerText=maths[0].getAttribute("alt");maths[0].parentElement.replaceChild(s,maths[0])}MathJax.Hub.Typeset();})()">
+					<img class="bookmarklet" src="wordpress-logo-hoz-rgb.png" alt="Replace WordPress.com maths with MathJax">
 				</a>
 				<div id="install"><em>Drag&amp;Drop to your bookmarks (right-click under older IE)!</em></div>
 			</div>
