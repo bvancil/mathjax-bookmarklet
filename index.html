@@ -51,12 +51,9 @@
 				<h1>MathJax Bookmarklet</h1>
 			</div>
 			<div class="col-md-6">
-				<p>
-					<a href="https://github.com/christianp/mathjax-bookmarklet">MathJax Bookmarklet</a> is a bookmarklet for rendering Tex/LaTeX, MathML and AsciiMathML notation on pages dynamically using the <a href="http://www.mathjax.org/">MathJax</a> library.
-				</p>
-				<p>
-					LaTeX notation is rendered only when delimited by <code>$</code>, or display maths between <code>\[</code> and <code>\]</code>.
-				</p>
+				<p>This bookmarklet renders Tex/LaTeX, MathML and AsciiMathML notation on pages dynamically using the <a href="http://www.mathjax.org/">MathJax</a> library.</p>
+				<p>LaTeX notation is rendered only when delimited by <code>$</code>, or display maths between <code>\[</code> and <code>\]</code>.</p>
+				<p>ASCIIMathML delimited by <code>`</code> is rendered as well.</p>
 			</div>
 			<div class="col-md-6 install">
 				<a href="javascript:(function(){function e(e){var t='.MathJax .mn {background: inherit;} .MathJax .mi {color: inherit;} .MathJax .mo {background: inherit;}';var a=e.createElement('style');a.innerText=t;try{a.textContent=t}catch(n){}e.getElementsByTagName('body')[0].appendChild(a);var i=e.createElement('script'),o;i.src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js';i.type='text/javascript';o='MathJax.Hub.Config({tex2jax:{inlineMath:[[\'$\',\'$\']],displayMath:[[\'\\\\[\',\'\\\\]\']],processEscapes:true}});MathJax.Hub.Startup.onload();';if(window.opera)i.innerHTML=o;else i.text=o;e.getElementsByTagName('head')[0].appendChild(i)}function t(t){if(t.MathJax===undefined){e(t.document)}else{t.MathJax.Hub.Queue(new t.Array('Typeset',t.MathJax.Hub))}}var a=document.getElementsByTagName('iframe'),n,i;t(window);for(n=0;n<a.length;n++){i=a[n].contentWindow||a[n].contentDocument;if(!i.document)i=i.parentNode;t(i)}})();">
@@ -66,10 +63,12 @@
 			</div>
 		</div>
 		<div class="row" style="margin-top:2em">
+			<div >
+				<h2>Image replacement bookmarklet</h2>
+			</div>
 			<div class="col-md-6">
-				<p>
-					I've also made a second bookmarklet to replace the blurry image-based maths used on WordPress.com blogs and Wikipedia with nice neat MathJax. Use this one instead of the one above when you're on a WordPress.com blog or Wikipedia.
-				</p>
+				<p>I've also made a second bookmarklet to replace the blurry image-based maths used on WordPress.com blogs and Wikipedia with nice neat MathJax. This one does all the same things as the normal MathJax bookmarklet in addition to image replacement, but I thought it would be safer to have a second bookmarklet in case it causes problems on other sites.</p>
+				<p>Use this one instead of the one above when you're on a WordPress.com blog or Wikipedia.</p>
 			</div>
 			<div class="col-md-6 install">
 				<a href="javascript:(function(){function e(e){var t='.MathJax .mn {background: inherit;} .MathJax .mi {color: inherit;} .MathJax .mo {background: inherit;}';var a=e.createElement('style');a.innerText=t;try{a.textContent=t}catch(n){}e.getElementsByTagName('body')[0].appendChild(a);var r=e.createElement('script'),i;r.src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js';r.type='text/javascript';i='MathJax.Hub.Config({tex2jax:{inlineMath:[[\'$\',\'$\']],displayMath:[[\'\\\\[\',\'\\\\]\']],processEscapes:true}});MathJax.Hub.Startup.onload();';if(window.opera)r.innerHTML=i;else r.text=i;e.getElementsByTagName('head')[0].appendChild(r)}function t(t){function a(e){var a=t.document.createElement('span');a.setAttribute('class','MathJax_Preview');var n=t.document.createElement('script');n.setAttribute('type','math/tex');n.innerText=e.getAttribute('alt');var r=e.parentElement;r.replaceChild(n,e);a.appendChild(e);r.insertBefore(a,n)}var n=t.document.getElementsByClassName('latex');for(var r=0;r<n.length;r++){a(n[r])}if(t.MathJax===undefined){e(t.document)}else{t.MathJax.Hub.Queue(new t.Array('Typeset',t.MathJax.Hub))}}var a=document.getElementsByTagName('iframe'),n,r;t(window);for(n=0;n<a.length;n++){r=a[n].contentWindow||a[n].contentDocument;if(!r.document)r=r.parentNode;t(r)}})();">
@@ -83,11 +82,11 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="page-header">
+			<div>
 				<h2>Examples <small>Execute the bookmarklet and enjoy!</small></h2>
 			</div>
 			<div class="col-md-6">
-				<h3 class="page-header">LaTeX Examples</h3>
+				<h3 >LaTeX Examples</h3>
 				<h4>The Cauchy-Schwarz Inequality</h4>
 				<div class="prettyprint">
 					$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$
@@ -107,7 +106,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<h3 class="page-header">MathML Examples</h3>
+				<h3 >MathML Examples</h3>
 				<h4>Curl of a Vector Field</h4>
 				<div class="prettyprint">
 					<math display="block"><mrow><mover accent="true"><mrow><mo>∇</mo></mrow><mrow><mo>→</mo></mrow></mover><mo>×</mo><mover accent="true"><mrow><mi>F</mi></mrow><mrow><mo>→</mo></mrow></mover><mo>=</mo><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><msub><mrow><mi>F</mi></mrow><mrow><mi>z</mi></mrow></msub></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac><mo>−</mo><mfrac><mrow><mo>∂</mo><msub><mrow><mi>F</mi></mrow><mrow><mi>y</mi></mrow></msub></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac><mo>)</mo></mrow><mstyle mathvariant="bold" mathsize="normal"><mrow><mi>i</mi></mrow></mstyle><mo>+</mo><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><msub><mrow><mi>F</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac><mo>−</mo><mfrac><mrow><mo>∂</mo><msub><mrow><mi>F</mi></mrow><mrow><mi>z</mi></mrow></msub></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mstyle mathvariant="bold" mathsize="normal"><mrow><mi>j</mi></mrow></mstyle><mo>+</mo><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><msub><mrow><mi>F</mi></mrow><mrow><mi>y</mi></mrow></msub></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac><mo>−</mo><mfrac><mrow><mo>∂</mo><msub><mrow><mi>F</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><mstyle mathvariant="bold" mathsize="normal"><mrow><mi>k</mi></mrow></mstyle></mrow></math>
@@ -125,7 +124,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6">
-				<h3 class="page-header">AsciiMathML Example</h3>
+				<h3 >AsciiMathML Example</h3>
 				<div class="prettyprint code">
 					Solving the quadratic equation.
 					Suppose `a x^2+b x+c=0` and `a!=0`. We first divide by `\a` to get `x^2+b/a x+c/a=0`. 
@@ -139,7 +138,7 @@
 				</div>
 			</div>
 			<div clas="col-md-6">
-				<h3 class="page-header">WordPress.com image replacement example</h3>
+				<h3 >WordPress.com/Wikipedia image replacement example</h3>
 				<p>(Use the WordPress.com/Wikipedia bookmarklet to replace this image with MathJax)</p>
 				<img src="latex.png" alt="\begin{array}{rl} m_1a_1 + m_2a_2 &amp;= m_1 \left( \frac{m_2}{m_1+m_2} \right) + m_2 \left( \frac{-m_1}{m_1+m_2} \right) \\ &amp;= \frac{m_1m_2}{m_1+m_2} - \frac{m_2m_1}{m_1+m_2} = 0 \end{array}" title="\begin{array}{rl} m_1a_1 + m_2a_2 &amp;= m_1 \left( \frac{m_2}{m_1+m_2} \right) + m_2 \left( \frac{-m_1}{m_1+m_2} \right) \\ &amp;= \frac{m_1m_2}{m_1+m_2} - \frac{m_2m_1}{m_1+m_2} = 0 \end{array}" class="latex">
 			</div>
