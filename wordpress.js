@@ -30,6 +30,8 @@
     function executeMathJax(win) {
 
 		function replaceImageLaTeX(img) {
+			if(img.tagName!='IMG')
+				return;
 			var span = win.document.createElement('span');
 			span.setAttribute('class','MathJax_Preview');
 			var script = win.document.createElement('script');
@@ -42,6 +44,11 @@
 		}
 
 		var maths=win.document.getElementsByClassName('latex');
+		for(var i=0;i<maths.length;i++) {
+			replaceImageLaTeX(maths[i]);
+		}
+
+		maths=win.document.getElementsByClassName('tex');
 		for(var i=0;i<maths.length;i++) {
 			replaceImageLaTeX(maths[i]);
 		}

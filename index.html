@@ -8,7 +8,8 @@
 
 	<style>
 		.bookmarklet {
-			display: block;
+			display: inline-block;
+			text-align: center;
 
 			padding: 10px;
 
@@ -36,7 +37,7 @@
  			        box-shadow: 0 1px 2px rgba(0,0,0,.1);
 		}
 
-		#install {
+		.install {
 			margin-top: 5px;
 			text-align: center;
 		}
@@ -57,24 +58,28 @@
 					LaTeX notation is rendered only when delimited by <code>$</code>, or display maths between <code>\[</code> and <code>\]</code>.
 				</p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 install">
 				<a href="javascript:(function(){function e(e){var t='.MathJax .mn {background: inherit;} .MathJax .mi {color: inherit;} .MathJax .mo {background: inherit;}';var a=e.createElement('style');a.innerText=t;try{a.textContent=t}catch(n){}e.getElementsByTagName('body')[0].appendChild(a);var i=e.createElement('script'),o;i.src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js';i.type='text/javascript';o='MathJax.Hub.Config({tex2jax:{inlineMath:[[\'$\',\'$\']],displayMath:[[\'\\\\[\',\'\\\\]\']],processEscapes:true}});MathJax.Hub.Startup.onload();';if(window.opera)i.innerHTML=o;else i.text=o;e.getElementsByTagName('head')[0].appendChild(i)}function t(t){if(t.MathJax===undefined){e(t.document)}else{t.MathJax.Hub.Queue(new t.Array('Typeset',t.MathJax.Hub))}}var a=document.getElementsByTagName('iframe'),n,i;t(window);for(n=0;n<a.length;n++){i=a[n].contentWindow||a[n].contentDocument;if(!i.document)i=i.parentNode;t(i)}})();">
 					<img class="bookmarklet" src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" alt="MathJax">
 				</a>
-				<div id="install"><em>Drag&amp;Drop to your bookmarks (right-click under older IE)!</em></div>
+				<div><em>Drag&amp;Drop to your bookmarks (right-click under older IE)!</em></div>
 			</div>
 		</div>
 		<div class="row" style="margin-top:2em">
 			<div class="col-md-6">
 				<p>
-					I've also made a second bookmarklet to replace the blurry image-based maths on WordPress.com blogs with nice neat MathJax. Use this one instead of the one above when you're on a WordPress.com blog.
+					I've also made a second bookmarklet to replace the blurry image-based maths used on WordPress.com blogs and Wikipedia with nice neat MathJax. Use this one instead of the one above when you're on a WordPress.com blog or Wikipedia.
 				</p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 install">
 				<a href="javascript:(function(){function e(e){var t='.MathJax .mn {background: inherit;} .MathJax .mi {color: inherit;} .MathJax .mo {background: inherit;}';var a=e.createElement('style');a.innerText=t;try{a.textContent=t}catch(n){}e.getElementsByTagName('body')[0].appendChild(a);var r=e.createElement('script'),i;r.src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js';r.type='text/javascript';i='MathJax.Hub.Config({tex2jax:{inlineMath:[[\'$\',\'$\']],displayMath:[[\'\\\\[\',\'\\\\]\']],processEscapes:true}});MathJax.Hub.Startup.onload();';if(window.opera)r.innerHTML=i;else r.text=i;e.getElementsByTagName('head')[0].appendChild(r)}function t(t){function a(e){var a=t.document.createElement('span');a.setAttribute('class','MathJax_Preview');var n=t.document.createElement('script');n.setAttribute('type','math/tex');n.innerText=e.getAttribute('alt');var r=e.parentElement;r.replaceChild(n,e);a.appendChild(e);r.insertBefore(a,n)}var n=t.document.getElementsByClassName('latex');for(var r=0;r<n.length;r++){a(n[r])}if(t.MathJax===undefined){e(t.document)}else{t.MathJax.Hub.Queue(new t.Array('Typeset',t.MathJax.Hub))}}var a=document.getElementsByTagName('iframe'),n,r;t(window);for(n=0;n<a.length;n++){r=a[n].contentWindow||a[n].contentDocument;if(!r.document)r=r.parentNode;t(r)}})();">
-					<img class="bookmarklet" src="wordpress-logo-hoz-rgb.png" alt="Replace WordPress.com maths with MathJax">
+					<span class="bookmarklet">
+						<img src="wordpress-logo-hoz-rgb.png" alt="Replace image maths with MathJax">
+						<br/>
+						<img src="200px-wikipedia-logo-v2-en.svg.png" alt="Replace image maths with MathJax">
+					</span>
 				</a>
-				<div id="install"><em>Drag&amp;Drop to your bookmarks (right-click under older IE)!</em></div>
+				<div><em>Drag&amp;Drop to your bookmarks (right-click under older IE)!</em></div>
 			</div>
 		</div>
 		<div class="row">
@@ -135,7 +140,7 @@
 			</div>
 			<div clas="col-md-6">
 				<h3 class="page-header">WordPress.com image replacement example</h3>
-				<p>(Use the WordPress.com bookmarklet to replace this image with MathJax)</p>
+				<p>(Use the WordPress.com/Wikipedia bookmarklet to replace this image with MathJax)</p>
 				<img src="latex.png" alt="\begin{array}{rl} m_1a_1 + m_2a_2 &amp;= m_1 \left( \frac{m_2}{m_1+m_2} \right) + m_2 \left( \frac{-m_1}{m_1+m_2} \right) \\ &amp;= \frac{m_1m_2}{m_1+m_2} - \frac{m_2m_1}{m_1+m_2} = 0 \end{array}" title="\begin{array}{rl} m_1a_1 + m_2a_2 &amp;= m_1 \left( \frac{m_2}{m_1+m_2} \right) + m_2 \left( \frac{-m_1}{m_1+m_2} \right) \\ &amp;= \frac{m_1m_2}{m_1+m_2} - \frac{m_2m_1}{m_1+m_2} = 0 \end{array}" class="latex">
 			</div>
 		</div>
