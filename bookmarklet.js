@@ -1,6 +1,5 @@
 (function() {
 
-
     /* insert the MathJax script dynamically into the document */
 	/* also insert a fix for Google+, until fixed upstream in MathJax */
     function insertScript(doc) {
@@ -29,6 +28,7 @@
 
     /* execute MathJax for given window */
     function executeMathJax(win) {
+
         if (win.MathJax === undefined) {
             /* insert the script into document if MathJax global doesn't exist for given window */
             insertScript(win.document);

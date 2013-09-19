@@ -48,7 +48,7 @@
 			<div class="page-header">
 				<h1>MathJax Bookmarklet</h1>
 			</div>
-			<div class="span8">
+			<div class="col-md-6">
 				<p>
 					<a href="https://github.com/christianp/mathjax-bookmarklet">MathJax Bookmarklet</a> is a bookmarklet for rendering Tex/LaTeX, MathML and AsciiMathML notation on pages dynamically using the <a href="http://www.mathjax.org/">MathJax</a> library.
 				</p>
@@ -56,16 +56,21 @@
 					LaTeX notation is rendered only when delimited by <code>$</code>, or display maths between <code>\[</code> and <code>\]</code>.
 				</p>
 			</div>
-			<div class="span8">
+			<div class="col-md-6">
 				<a href="javascript:(function(){function e(e){var t='.MathJax .mn {background: inherit;} .MathJax .mi {color: inherit;} .MathJax .mo {background: inherit;}';var a=e.createElement('style');a.innerText=t;try{a.textContent=t}catch(n){}e.getElementsByTagName('body')[0].appendChild(a);var i=e.createElement('script'),o;i.src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js';i.type='text/javascript';o='MathJax.Hub.Config({tex2jax:{inlineMath:[[\'$\',\'$\']],displayMath:[[\'\\\\[\',\'\\\\]\']],processEscapes:true}});MathJax.Hub.Startup.onload();';if(window.opera)i.innerHTML=o;else i.text=o;e.getElementsByTagName('head')[0].appendChild(i)}function t(t){if(t.MathJax===undefined){e(t.document)}else{t.MathJax.Hub.Queue(new t.Array('Typeset',t.MathJax.Hub))}}var a=document.getElementsByTagName('iframe'),n,i;t(window);for(n=0;n<a.length;n++){i=a[n].contentWindow||a[n].contentDocument;if(!i.document)i=i.parentNode;t(i)}})();">
 					<img class="bookmarklet" src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" alt="MathJax">
 				</a>
 				<div id="install"><em>Drag&amp;Drop to your bookmarks (right-click under older IE)!</em></div>
 			</div>
-			<p>
-				I've also made a second bookmarklet to replace the blurry image-based maths on WordPress.com blogs with nice neat MathJax. Click the MathJax bookmarklet first, then click the WordPress one.
-			<div class="span8">
-				<a href="javascript:(function(){var maths=document.getElementsByClassName("latex");while(maths.length){var s=document.createElement("script");s.setAttribute("type","math/tex");s.innerText=maths[0].getAttribute("alt");maths[0].parentElement.replaceChild(s,maths[0])}MathJax.Hub.Typeset();})()">
+		</div>
+		<div class="row" style="margin-top:2em">
+			<div class="col-md-6">
+				<p>
+					I've also made a second bookmarklet to replace the blurry image-based maths on WordPress.com blogs with nice neat MathJax. Use this one instead of the one above when you're on a WordPress.com blog.
+				</p>
+			</div>
+			<div class="col-md-6">
+				<a href="javascript:(function(){function e(e){var t='.MathJax .mn {background: inherit;} .MathJax .mi {color: inherit;} .MathJax .mo {background: inherit;}';var a=e.createElement('style');a.innerText=t;try{a.textContent=t}catch(n){}e.getElementsByTagName('body')[0].appendChild(a);var r=e.createElement('script'),i;r.src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js';r.type='text/javascript';i='MathJax.Hub.Config({tex2jax:{inlineMath:[[\'$\',\'$\']],displayMath:[[\'\\\\[\',\'\\\\]\']],processEscapes:true}});MathJax.Hub.Startup.onload();';if(window.opera)r.innerHTML=i;else r.text=i;e.getElementsByTagName('head')[0].appendChild(r)}function t(t){function a(e){var a=t.document.createElement('span');a.setAttribute('class','MathJax_Preview');var n=t.document.createElement('script');n.setAttribute('type','math/tex');n.innerText=e.getAttribute('alt');var r=e.parentElement;r.replaceChild(n,e);a.appendChild(e);r.insertBefore(a,n)}var n=t.document.getElementsByClassName('latex');for(var r=0;r<n.length;r++){a(n[r])}if(t.MathJax===undefined){e(t.document)}else{t.MathJax.Hub.Queue(new t.Array('Typeset',t.MathJax.Hub))}}var a=document.getElementsByTagName('iframe'),n,r;t(window);for(n=0;n<a.length;n++){r=a[n].contentWindow||a[n].contentDocument;if(!r.document)r=r.parentNode;t(r)}})();">
 					<img class="bookmarklet" src="wordpress-logo-hoz-rgb.png" alt="Replace WordPress.com maths with MathJax">
 				</a>
 				<div id="install"><em>Drag&amp;Drop to your bookmarks (right-click under older IE)!</em></div>
@@ -75,7 +80,7 @@
 			<div class="page-header">
 				<h2>Examples <small>Execute the bookmarklet and enjoy!</small></h2>
 			</div>
-			<div class="span8">
+			<div class="col-md-6">
 				<h3 class="page-header">LaTeX Examples</h3>
 				<h4>The Cauchy-Schwarz Inequality</h4>
 				<div class="prettyprint">
@@ -95,7 +100,7 @@
 {1+\frac{e^{-8\pi}} {1+\ldots} } } }$
 				</div>
 			</div>
-			<div class="span8">
+			<div class="col-md-6">
 				<h3 class="page-header">MathML Examples</h3>
 				<h4>Curl of a Vector Field</h4>
 				<div class="prettyprint">
@@ -110,9 +115,10 @@
 					<math display="block"><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mi>N</mi></mrow></mfrac><mstyle displaystyle="true"><mrow><munderover><mrow><mo>∑</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>N</mi></mrow></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>−</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></mrow></mstyle></mrow></msqrt><mo>.</mo></mrow></math>
 				</div>
 			</div>
+
 		</div>
 		<div class="row">
-			<div class="span8">
+			<div class="col-md-6">
 				<h3 class="page-header">AsciiMathML Example</h3>
 				<div class="prettyprint code">
 					Solving the quadratic equation.
@@ -125,6 +131,11 @@
 					Finally we move the `b/(2a)` to the right and simplify to get 
 					the two solutions: `x_(1,2)=(-b+-sqrt(b^2-4a c))/(2a)`
 				</div>
+			</div>
+			<div clas="col-md-6">
+				<h3 class="page-header">WordPress.com image replacement example</h3>
+				<p>(Use the WordPress.com bookmarklet to replace this image with MathJax)</p>
+				<img src="latex.png" alt="\begin{array}{rl} m_1a_1 + m_2a_2 &amp;= m_1 \left( \frac{m_2}{m_1+m_2} \right) + m_2 \left( \frac{-m_1}{m_1+m_2} \right) \\ &amp;= \frac{m_1m_2}{m_1+m_2} - \frac{m_2m_1}{m_1+m_2} = 0 \end{array}" title="\begin{array}{rl} m_1a_1 + m_2a_2 &amp;= m_1 \left( \frac{m_2}{m_1+m_2} \right) + m_2 \left( \frac{-m_1}{m_1+m_2} \right) \\ &amp;= \frac{m_1m_2}{m_1+m_2} - \frac{m_2m_1}{m_1+m_2} = 0 \end{array}" class="latex">
 			</div>
 		</div>
 	</div>
