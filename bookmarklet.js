@@ -29,7 +29,7 @@
     /* execute MathJax for given window */
     function executeMathJax(win) {
 
-        if (win.MathJax === undefined) {
+        if ((win.MathJax === undefined) || (win.MathJax.Hub === undefined)) {
             /* insert the script into document if MathJax global doesn't exist for given window */
             insertScript(win.document);
         } else {
